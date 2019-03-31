@@ -27,7 +27,7 @@ int main()
 	{
 		set_example();
 		float yy = w[0] * x[0] + w[1] * x[1] + w[2] * x[2];
-		//printf("目標結果(W = 0.3 0.3 0.4)y = %6.2f\t目前結果(w = 0.5 0.2 0.3)yy = %6.2f\t誤差值y-yy = %6.2f\n", y, yy, y - yy);
+		printf("目標結果(W = 0.3 0.3 0.4)y = %6.2f\t目前結果(w = 0.5 0.2 0.3)yy = %6.2f\t誤差值y-yy = %6.2f\n", y, yy, y - yy);
 		//	目前權重 + 誤差結果
 		w[0] += LEARNING_RATE * x[0] * (y - yy);
 		w[1] += LEARNING_RATE * x[1] * (y - yy);
