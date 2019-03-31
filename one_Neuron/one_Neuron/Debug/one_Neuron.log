@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  one_Neuron.cpp
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(12): warning C4838: 從 'double' 到 'float' 的轉換必須是縮小轉換
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(12): warning C4305: '正在初始化': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(18): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(19): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(24): warning C4244: '引數': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(32): warning C4244: '+=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(33): warning C4244: '+=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+c:\users\kao\documents\visual studio 2015\projects\one_neuron\one_neuron\one_neuron.cpp(34): warning C4244: '+=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+  one_Neuron.vcxproj -> C:\Users\KAO\Documents\Visual Studio 2015\Projects\one_Neuron\Debug\one_Neuron.exe
+  one_Neuron.vcxproj -> C:\Users\KAO\Documents\Visual Studio 2015\Projects\one_Neuron\Debug\one_Neuron.pdb (Full PDB)
