@@ -1,0 +1,61 @@
+// oneNeuron.cpp : 此檔案包含 'main' 函式。程式會於該處開始執行及結束執行。
+//
+
+#include "pch.h"
+#include <iostream>
+#include "stdlib.h"
+#include "time.h"
+#include "math.h"
+
+float f(int n, float x[], float w[])
+{
+	float sum = 0;
+	for (int i = 0; i < n; i++) sum += w[i] * x[i];
+	if (sum >= 60) return 1.0;
+	return 0.0;
+}
+
+float g(int n, float x[], float w[], float b)
+{
+	float y = b;
+	for (int i = 0; i < n; i++) y += w[i] * x[i] * 0.01;
+	//printf("y = %.2f\n", y);
+	return exp(y) / (exp(y) + 1.0);
+}
+
+void set_example(int n, float x[])
+{
+	for (int i = 0; i < n; i++) x[i] = rand() % 100 + 1.0;
+}
+float r = 0.00001;
+
+int main()
+{
+	srand(time(NULL)); rand();
+		
+	float w[3] = { 0.3, 0.3, 0.4 };
+	float ww[3] = { 0.1, 0.5, 0.4 };
+	float x[3];
+	float b = -0.6;
+	int m = 0;
+	for (int n = 0; n < 5000; n++)
+	{
+		set_example(3, x);
+		float y = f(3, x, w);
+		float yy = g(3, x, ww, b);
+		float dy = y - yy;
+		for (int i = 0; i < 3; i++) ww[i] = ww[i] + r * x[i] * dy * (yy*(1-yy));
+		b = b + r * dy * (yy*(1 - yy));
+		//	for (int i = 0; i < 3; i++) printf("%.2f\t", x[i]);	
+		printf("yy = %.2f y = %.2f\n", yy, y);
+		if (n > 4000)
+		{
+			if (y > 0.5 && yy < 0.5) m++;
+			else if (y < 0.5 && yy > 0.5) m++;
+		}
+		//	for (int i = 0; i < 3; i++) printf("%.2f\t", ww[i]); printf("\n");
+	}
+	printf("m = %d\n", m);
+
+	return 0;
+}
